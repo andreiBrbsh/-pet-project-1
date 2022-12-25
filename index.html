@@ -4,11 +4,10 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet"> 
-
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
       <link rel="stylesheet" href="./styles/style.css" type="text/css">
       <title>Home Page</title>
 </head>
@@ -18,24 +17,109 @@
 
             <header class="header">
                   <div class="header__container">
-                        H
+
+                        <a href="#" class="header__logo">SmartSpace</a>
+
+                        <nav class="header__menu menu">
+                              <ul class="menu__list">
+                                    <li class="menu__item">
+                                          <a href="#" class="menu__link">home</a>
+                                    </li>
+                                    <li class="menu__item">
+                                          <a href="#" class="menu__link">about</a>
+                                    </li>
+                                    <li class="menu__item">
+                                          <a href="#" class="menu__link">service</a>
+                                    </li>
+                                    <li class="menu__item">
+                                          <a href="#" class="menu__link">portfolio</a>
+                                    </li>
+                                    <li class="menu__item">
+                                          <a href="#" class="menu__link">blog</a>
+                                    </li>
+                                    <li class="menu__item">
+                                          <a href="#" class="menu__link">contact</a>
+                                    </li>
+                              </ul>
+                        </nav>
+
                   </div>
             </header>
 
 
             <main class="page">
-                  P
+                  <section class="page__main main-block">
+                        <div class="main-block__container">
+                              <div class="main-block__body body-main-block">
+                                    <div class="body-main-block__content content-main-block">
+                                          <div class="content-main-block__body">
+                                                <div class="content-main-block__sub-title">RESIDENTIAL & OFFICE SPACES</div>
+                                                <h1 class="content-main-block__title">Smart Living Style
+                                                      for Smart People</h1>
+                                                <div class="content-main-block__text">Much did had call new drew that kept. Limits expect wonder law she. Now has you views woman noisy match money rooms.</div>
+                                          </div>
+                                                <form class="content-main-block__form form-main-block" action="#">
+                                                      <input type="text" class="form-main-block__input" placeholder="Enter Zipcode to search properties">
+                                                      <button type="submit" class="form-main-block__button">Search Now!</button>
+                                                </form>
+                                    </div>
+                                          <div class="body-main-block__slider slider-main-block swiper">
+                                                <div class="slider-main-block__wrapper swiper-wrapper">
+                                                      <div class="slider-main-block__slide swiper-slide">
+                                                            <img src="img/slider/1.jpg" alt="slider image">
+                                                      </div>
+                                                      <div class="slider-main-block__slide swiper-slide">
+                                                            <img src="img/slider/2.jpg" alt="slider image">
+                                                      </div>
+                                                      <div class="slider-main-block__slide swiper-slide">
+                                                            <img src="img/slider/3.jpg" alt="slider image">
+                                                      </div>
+                                                </div>
+                                          </div>
+                                          <div class="body-main-block__arrows">
+                                                <div class="body-main-block__arrow swiper-button-prev"></div>
+                                                <div class="body-main-block__arrow swiper-button-next"></div>
+                                          </div>
+                              </div>
+                              <div class="main-block__partners partners-main-block">
+                                    <div class="partners-main-block__label">Our Amazing Partners.</div>
+                                    <div class="partners-main-block__items">
+                                          <div class="partners-main-block__item">
+                                                <img src="/img/icons/partners-1.svg" alt="partner logo">
+                                          </div>
+                                          <div class="partners-main-block__item">
+                                                <img src="/img/icons/partners-2.svg" alt="partner logo">
+                                          </div>
+                                          <div class="partners-main-block__item">
+                                                <img src="/img/icons/partners-3.svg" alt="partner logo">
+                                          </div>
+                                          <div class="partners-main-block__item">
+                                                <img src="/img/icons/partners-4.svg" alt="partner logo">
+                                          </div>
+                                          <div class="partners-main-block__item">
+                                                <img src="/img/icons/partners-5.svg" alt="partner logo">
+                                          </div>
+                                          <div class="partners-main-block__item">
+                                                <img src="/img/icons/partners-6.svg" alt="partner logo">
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </section>
             </main>
 
 
             <footer class="footer">
-                  F
+                  FOOTER
             </footer>
 
 
       </div>
 
+      <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
       <script src="./scripts/script.js"></script>
+
+
 </body>
 </html>
 
