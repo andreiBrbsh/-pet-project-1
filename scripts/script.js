@@ -1,7 +1,4 @@
 'use strict';
-
-
-
 // SLIDER --------
 const swiper = new Swiper('.body-main-block__slider', {
       loop: true,
@@ -10,4 +7,5 @@ const swiper = new Swiper('.body-main-block__slider', {
         prevEl: '.body-main-block__arrow.swiper-button-prev',
       },
 });
+
 

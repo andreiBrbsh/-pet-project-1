@@ -27,6 +27,10 @@ body {
       font-family: 'Manrope', sans-serif;
       color: #31353B;
 }
+input:active, :hover, :focus {
+      outline: 0;
+      outline-offset: 0;
+  } 
 /* MAIN... */
 .wrapper {
       min-height: 100%;
@@ -36,6 +40,19 @@ body {
 }
 .page {
       flex: 1 1 auto;
+}
+.title {
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 55px;
+}
+.title_center {
+      text-align: center;
+}
+@media (max-width: 767.98px) {
+      .title {
+            font-size: 30px;
+      }
 }
 [class*="__container"] {
       max-width: 1170px;
@@ -310,8 +327,133 @@ body {
       }
 }
 
+/* BLOCK HOW */
+
+.how {
+      padding-top: 110px;
+      padding-bottom: 110px;
+}
+
+.how__title {
+      margin-bottom: 70px;
+}
+@media (max-width: 767.98px){
+      .how {
+            padding-top: 5px;
+      }
+      .how__title {
+            margin-bottom: 30px;
+      }
+}
+.how__items {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: start;
+      column-gap: 30px;
+      row-gap: 45px;
+      justify-items: center;
+      padding: 0px 35px;
+}
+.how__item {
+      max-width: 260px;
+}
+
+.item-how {
+      display: grid;
+      justify-items: center;
+      text-align: center;
+      position: relative;
+}
+.item-how_1::after {
+      content: "";
+      position: absolute;
+      right: 0px;
+      top: 41px;
+      height: 11px;
+      width: 100%;
+      max-width: 205px;
+      background: url(../img/icons/line-left.svg) 0 0 / 100% no-repeat;
+      transform: translate(74%, 0px);
+}
+.item-how_2::after {
+      content: "";
+      position: absolute;
+      right: 0px;
+      top: 41px;
+      height: 11px;
+      width: 100%;
+      max-width: 205px;
+      background: url(../img/icons/line-left.svg) 0 0 / 100% no-repeat;
+      transform: translate(74%, 0px) rotate(180deg);
+}
+.item-how_1 .item-how__icon {
+      background: #9672FF;
+      box-shadow: 0px 97.0386px 77.6309px rgba(150, 114, 255, 0.07), 0px 62.8954px 45.4644px rgba(150, 114, 255, 0.0531481), 0px 37.3778px 24.7269px rgba(150, 114, 255, 0.0425185), 0px 19.4077px 12.615px rgba(150, 114, 255, 0.035), 0px 7.90685px 6.32548px rgba(150, 114, 255, 0.0274815), 0px 1.79701px 3.05492px rgba(150, 114, 255, 0.0168519);
+}
+.item-how_2 .item-how__icon {
+      background: #4DDFFD;
+      box-shadow: 0px 97.0386px 77.6309px rgba(77, 223, 253, 0.07), 0px 62.8954px 45.4644px rgba(77, 223, 253, 0.0531481), 0px 37.3778px 24.7269px rgba(77, 223, 253, 0.0425185), 0px 19.4077px 12.615px rgba(77, 223, 253, 0.035), 0px 7.90685px 6.32548px rgba(77, 223, 253, 0.0274815), 0px 1.79701px 3.05492px rgba(77, 223, 253, 0.0168519);
+}
+.item-how_3 .item-how__icon {
+      background: #F2B8EC;
+      box-shadow: 0px 97.0386px 77.6309px rgba(242, 184, 236, 0.07), 0px 62.8954px 45.4644px rgba(242, 184, 236, 0.0531481), 0px 37.3778px 24.7269px rgba(242, 184, 236, 0.0425185), 0px 19.4077px 12.615px rgba(242, 184, 236, 0.035), 0px 7.90685px 6.32548px rgba(242, 184, 236, 0.0274815), 0px 1.79701px 3.05492px rgba(242, 184, 236, 0.0168519);
+}
+
+.item-how__icon {
+      margin-bottom: 70px;
+      width: 90px;
+      height: 90px;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
 
 
+.item-how__title {
+      margin-bottom: 15px;
+      font-weight: 600;
+      font-size: 22x;
+      line-height: 29px;
+}
+.item-how__text {
+      font-weight: 400;
+      line-height: 25px;
+}
 
+@media (max-width: 1199.98px) {
+      .item-how:not(:last-child)::after {
+            width: 170px;
+            transform: translate(60%, 0px);
+      }
+      .item-how_2:not(:last-child)::after {
+            transform: translate(60%, 0px) rotate(180deg);
+      }
+}
+@media (max-width: 990.98px) {
+      .item-how:not(:last-child)::after {
+            width: 100px;
+            transform: translate(65%, 0px);
+      }
+      .item-how_2:not(:last-child)::after {
+            transform: translate(65%, 0px) rotate(180deg);
+      }
+}
 
+@media (max-width: 767.98px) {
+      .item-how:not(:last-child)::after {
+            display: none;
+      }
+      .how__items {
+            grid-template-columns: 1fr;
+            padding: 0px 15px;
+            justify-items: center;
+      }
+      .item-how__icon {
+            margin-bottom: 15px;
+      }
+      .how__item {
+            max-width: 100%;
+      }
+}
 
