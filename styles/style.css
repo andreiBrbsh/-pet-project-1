@@ -9,6 +9,9 @@
 a {
       text-decoration: none;
 }
+button {
+      cursor: pointer;
+}
 ol, ul, li {
       list-style: none;
 }
@@ -100,6 +103,7 @@ input:active, :hover, :focus {
       font-weight: 800;
       font-size: 23px;
       color: inherit;
+      position: relative;
 }
 .menu__list {
       display: flex;
@@ -112,9 +116,21 @@ input:active, :hover, :focus {
       font-size: 13px;
       color: inherit;
       text-transform: capitalize;
+      position: relative;
 }
-.menu__link:hover {
-      text-decoration: underline;
+.header__link-hover::after {
+      content: "";
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      background: #f85947;
+      height: 4px;
+      width: 0px;
+      transition: all 0.2s;
+}
+.header__link-hover:hover::after {
+      width: 100%;
+      opacity: 0.5;
 }
 @media (max-width: 767.98px) {
       .menu__list {
@@ -235,9 +251,12 @@ input:active, :hover, :focus {
       color: #fff;
       padding: 5px 15px;
       flex: 0 0 188px;
-      background: #F85A47;
+      background: #f85947;
+      transition: all 0.5s;
 }
-
+.button-hover:hover {
+      opacity: 0.8;
+}
 .slider-main-block__slide {
       position: relative;
       padding-bottom: 95%;
@@ -271,7 +290,6 @@ input:active, :hover, :focus {
 .body-main-block__arrow.swiper-button-prev {
       transform: rotate(-180deg);
 }
-
 @media (max-width: 1199.98px) {
       .main-block__container {
             padding-top: 80px;
@@ -302,7 +320,6 @@ input:active, :hover, :focus {
             gap: 15px;
       }
 }
-
 @media (max-width: 767.98px) {
       .partners-main-block__items {
             gap: 25px;
@@ -326,9 +343,6 @@ input:active, :hover, :focus {
             padding: 0px 15px;
       }
 }
-
-/* BLOCK HOW */
-
 .how {
       padding-top: 110px;
       padding-bottom: 110px;
@@ -357,7 +371,6 @@ input:active, :hover, :focus {
 .how__item {
       max-width: 260px;
 }
-
 .item-how {
       display: grid;
       justify-items: center;
@@ -408,8 +421,6 @@ input:active, :hover, :focus {
       justify-content: center;
       align-items: center;
 }
-
-
 .item-how__title {
       margin-bottom: 15px;
       font-weight: 600;
@@ -420,7 +431,6 @@ input:active, :hover, :focus {
       font-weight: 400;
       line-height: 25px;
 }
-
 @media (max-width: 1199.98px) {
       .item-how:not(:last-child)::after {
             width: 170px;
@@ -439,7 +449,6 @@ input:active, :hover, :focus {
             transform: translate(65%, 0px) rotate(180deg);
       }
 }
-
 @media (max-width: 767.98px) {
       .item-how:not(:last-child)::after {
             display: none;
@@ -456,4 +465,177 @@ input:active, :hover, :focus {
             max-width: 100%;
       }
 }
+ 
+/* TABS ================================== */
 
+.deals {
+      padding-top: 110px;
+      padding-bottom: 110px;
+}
+@media (max-width: 990.98) {
+      .deals {
+            padding-top: 70px;
+            padding-bottom: 70px;
+      }
+}
+@media (max-width: 767.98) {
+      .deals {
+            padding-top: 30px;
+            padding-bottom: 30px;
+      }
+}
+.deals__container {}
+.deals__header {
+      margin-bottom: 50px;
+}
+.deals__tabs {}
+
+.header-deals {
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 20px;
+}
+.header-deals__content {
+      flex: 1 1 auto;
+}
+.header-deals__title {}
+.header-deals__title:not(:last-child) {
+      margin-bottom: 15px;
+}
+.header-deals__text {
+      max-width: 480px;
+      font-weight: 400;
+      line-height: 23px;
+}
+.header-deals__link {
+      display: inline-block;
+      padding: 22px 32px;
+      color: #fff;
+      background: #F85A47;
+      box-shadow: 0px 97.0386px 77.6309px rgba(248, 90, 71, 0.07), 0px 62.8954px 45.4644px rgba(248, 90, 71, 0.0531481), 0px 37.3778px 24.7269px rgba(248, 90, 71, 0.0425185), 0px 19.4077px 12.615px rgba(248, 90, 71, 0.035), 0px 7.90685px 6.32548px rgba(248, 90, 71, 0.0274815), 0px 1.79701px 3.05492px rgba(248, 90, 71, 0.0168519);
+      border-radius: 5px;
+      font-weight: 500;
+      line-height: 23px;
+      text-align: center;
+      transition: all 0.3s;
+}
+@media (max-width: 767.98px) {
+      .header-deals__link {
+            width: 100%;
+      }
+}
+.tabs-deals {}
+.tabs-deals__nav {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 48px;
+      row-gap: 10px;
+      margin-bottom: 35px;
+}
+.tabs-deals__button {
+      background: transparent;
+      font-size: 18px;
+      line-height: 25px;
+      transition: all 0.3s;
+      position: relative;
+}
+.tabs-deals__button::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      height: 2px;
+      width: 0px;
+      background: #F85A47;
+      transition: all 0.3s;
+}
+.tabs-deals__button:hover {
+      color:#F85A47;
+}
+.tabs-deals__button:hover:after {
+      width: 100%;
+}
+.tabs-deals__button.active {
+      color:#F85A47;
+}
+.tabs-deals__button.active::after {
+      width: 100%;
+}
+
+
+
+
+.tabs-deals__body {}
+.tabs-deals__item {}
+
+.item-tabs {}
+.item-tabs__items {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+@media (max-width: 990.98px) {
+      .item-tabs__items {
+            display: grid;
+            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+}
+@media (max-width: 767.98px) {
+      .item-tabs__items {
+            display: block;
+      }
+      .item-tabs__item {
+            width: 100%;
+            margin: 20px 0px;
+      }
+}
+.item-tabs__item {
+      position: relative;
+}
+.item-tabs__options {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      z-index: 222;
+}
+.item-tabs__option {
+      border: 2px solid red;
+      font-size: 12px;
+      line-height: 14px;
+      text-align: center;
+      color: #FFF;
+      padding: 6px 12px;
+      background: rgba(0, 0, 0, 0.4);
+      border: 0.970386px solid #FFFFFF;
+      border-radius: 5px;
+      transition: all 0.3s;
+}
+.item-tabs__option:hover {
+      background: rgba(0, 0, 0, 0.8);
+}
+.item-tabs__image {
+      display: block;
+      position: relative;
+      padding-bottom: 81%;
+      border-radius: 5px;
+      overflow: hidden;
+}
+.item-tabs__image img {
+      transition: all 0.3s;
+}
+.item-tabs__image:hover img {
+      transform: scale(1.1);
+}
+.item-tabs__image img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+}
+
+
+/* TABS ================================== */

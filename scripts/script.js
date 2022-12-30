@@ -8,4 +8,10 @@ const swiper = new Swiper('.body-main-block__slider', {
       },
 });
 
+// TABS ----------
+
+
+
+
+
 
