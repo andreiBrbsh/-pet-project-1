@@ -465,9 +465,6 @@ input:active, :hover, :focus {
             max-width: 100%;
       }
 }
- 
-/* TABS ================================== */
-
 .deals {
       padding-top: 110px;
       padding-bottom: 110px;
@@ -484,12 +481,9 @@ input:active, :hover, :focus {
             padding-bottom: 30px;
       }
 }
-.deals__container {}
 .deals__header {
       margin-bottom: 50px;
 }
-.deals__tabs {}
-
 .header-deals {
       display: flex;
       align-items: flex-start;
@@ -499,7 +493,6 @@ input:active, :hover, :focus {
 .header-deals__content {
       flex: 1 1 auto;
 }
-.header-deals__title {}
 .header-deals__title:not(:last-child) {
       margin-bottom: 15px;
 }
@@ -525,7 +518,6 @@ input:active, :hover, :focus {
             width: 100%;
       }
 }
-.tabs-deals {}
 .tabs-deals__nav {
       display: flex;
       flex-wrap: wrap;
@@ -562,24 +554,16 @@ input:active, :hover, :focus {
 .tabs-deals__button.active::after {
       width: 100%;
 }
-
-
-
-
-.tabs-deals__body {}
-.tabs-deals__item {}
-
-.item-tabs {}
 .item-tabs__items {
       display: grid;
       gap: 30px;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(3, minmax(280px, 360px));
 }
 @media (max-width: 990.98px) {
       .item-tabs__items {
             display: grid;
             gap: 30px;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(180px, 220px));
       }
 }
 @media (max-width: 767.98px) {
@@ -636,6 +620,10 @@ input:active, :hover, :focus {
       left: 0;
       object-fit: cover;
 }
+.tabs-deals__item {
+      display: none;
+}
+.tabs-deals__item.active {
+      display: block;
+}
 
-
-/* TABS ================================== */
