@@ -45,6 +45,13 @@ document.addEventListener('click', function(e) {
 
 
 
+// BURGER
+const container = document.querySelector('.header__container');
+const but = document.querySelector('.header__burger');
+  but.addEventListener('click', function(){
+    container.classList.toggle('open');
+  });
+
 
 
 
