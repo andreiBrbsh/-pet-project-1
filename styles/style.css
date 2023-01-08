@@ -1134,7 +1134,7 @@ input:active, :hover, :focus {
       .header__burger {
             display: block;
             position: absolute;
-            top: 30px;
+            top: 40px;
             left: 20px;
             z-index: 2;
             height: 30px;
@@ -1190,5 +1190,13 @@ input:active, :hover, :focus {
       .menu__item a:hover {
             color: #f85947;
             letter-spacing: 6px;
+            /* -webkit-tap-highlight-color: rgba(0, 0, 0, 0); */
+
       }
+      .menu__item a:active, a:link, a:visited, a:focus {
+
+            outline: none;
+            background: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
 }
