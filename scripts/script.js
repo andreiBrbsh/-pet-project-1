@@ -12,11 +12,7 @@ const swiper = new Swiper('.body-main-block__slider', {
 
 // buttons
 const tabNavItems = document.querySelectorAll('.tabs-deals__button');
-
-// tabs
 const tabItems = document.querySelectorAll('.item-tabs');
-
-
 
 document.addEventListener('click', function(e) {
   const targetElement = e.target;
@@ -38,12 +34,6 @@ document.addEventListener('click', function(e) {
     tabItems[newActiveIndex].classList.add('active');
   } 
 });
-
-
-
-
-
-
 
 // BURGER
 const container = document.querySelector('.header__container');
